@@ -1,0 +1,87 @@
+[Common]
+log_directory=$HOME/.mirror0/LOGS
+output_directory=$HOME/.mirror0/OUT_DATA
+index_directory=$HOME/.mirror0/index
+#live empty if driver is in PATH
+chromedriver_path=
+no_duplicate_videos=1
+hls_prefer_native=1
+
+[Foxsports]
+start_urls=
+    /afl
+    /afl/draft
+    /video/afl/afl-tonight
+    http://www.foxsports.com.au/afl/market-watch
+    /video/afl/afl
+    http://www.foxsports.com.au/video/afl/afl-360
+    http://www.foxsports.com.au/video/afl/on-the-couch
+    http://www.foxsports.com.au/video/afl/open-mike
+    http://www.foxsports.com.au/video/afl/bounce
+    http://www.foxsports.com.au/video/afl/league-teams
+    http://www.foxsports.com.au/video/afl/afl-trade-and-draft
+    http://www.foxsports.com.au/video/afl/fantasy
+    http://www.foxsports.com.au/video/afl/press-conferences
+    /afl/teams/adelaide-crows
+    /afl/teams/essendon-bombers
+    /afl/teams/greater-western-sydney-giants
+    /afl/teams/port-adelaide-power
+    /afl/teams/west-coast-eagles
+    /afl/teams/brisbane-lions
+    /afl/teams/fremantle-dockers
+    /afl/teams/hawthorn-hawks
+    /afl/teams/richmond-tigers
+    /afl/teams/western-bulldogs
+    /afl/teams/carlton-blues
+    /afl/teams/geelong-cats
+    /afl/teams/melbourne-demons
+    /afl/teams/st-kilda-saints
+    /afl/teams/collingwood-magpies
+    /afl/teams/gold-coast-suns
+    /afl/teams/north-melbourne-kangaroos
+    /afl/teams/sydney-swans
+    /afl/opinion
+    /afl/latest-news
+
+
+[Watoday]
+start_urls=
+      /afl/afl-news
+      /afl
+      /afl/adelaide-crows
+      /afl/injury-news
+#uncomment the desired clubs
+#      /afl/fremantle-dockers 
+#      /afl/brisbane-lions 
+#      /afl/carlton-blues 
+#     /afl/collingwood-magpies 
+#     /afl/essendon-bombers 
+#     /afl/geelong-cats 
+#     /afl/gold-coast 
+#     /afl/greater-western-sydney-giants 
+#    /afl/hawthorn-hawks 
+#    /afl/melbourne-demons 
+#    /afl/north-melbourne-kangaroos 
+#    /afl/port-adelaide-power 
+#    /afl/richmond-tigers 
+#    /afl/st-kilda-saints 
+#    /afl/sydney-swans 
+#    /afl/west-coast-eagles 
+#    /afl/western-bulldogs
+
+[Afl]
+start_urls=
+    http://www.afl.com.au/news/round-by-round/after-the-siren
+
+[Yahoo]
+start_urls=
+    https://au.sports.yahoo.com/afl
+
+[WesternBulldogs]
+start_urls=
+        http://www.westernbulldogs.com.au/bulldogstv/latest-videos/press-conferences    
+        http://www.westernbulldogs.com.au/news/latest-news
+        http://www.westernbulldogs.com.au/news/injury-news
+        http://www.westernbulldogs.com.au/bulldogstv/latest-videos/melrose-health-medical-room
+        http://www.westernbulldogs.com.au/bulldogstv/latest-videos/match-preview
+

@@ -1,0 +1,249 @@
+Application started
+0 OK  https://au.sports.yahoo.com/afl/a/31561573/no-limits-for-happy-buddy-tippett/
+1 OK  https://au.sports.yahoo.com/afl/a/31561784/eagles-jetta-facing-selection-chop-in-afl/
+2 OK  https://au.sports.yahoo.com/afl/a/31550768/afls-deliberate-rule-riles-lions-coach/
+3 OK  https://au.sports.yahoo.com/afl/a/31560310/dont-look-just-at-the-coach-mcguire/
+4 OK  https://au.sports.yahoo.com/afl/a/31559167/afl-gws-and-suns-head-in-different-directions/
+5 OK  https://au.sports.yahoo.com/afl/video/watch/31559078/patrick-dangerfield-all-smiles-ahead-of-crows-clash/
+6 OK  https://au.sports.yahoo.com/afl/video/watch/31559076/demons-find-winning-feeling/
+7 OK  https://au.sports.yahoo.com/afl/a/31563167/dockers-re-sign-danyle-pearce-in-afl/
+8 OK  https://au.sports.yahoo.com/afl/a/31563945/beveridge-backs-afl-shot-clock/
+9 OK  https://au.sports.yahoo.com/afl/a/31563844/beveridge-hits-out-at-afl-umps-criticism/
+10 OK  https://au.sports.yahoo.com/afl/video/watch/31564579/sydney-wary-of-losing-ahead-of-richmond-clash/
+11 EXISTS  https://au.sports.yahoo.com/afl/video/watch/31564579/sydney-wary-of-losing-ahead-of-richmond-clash/
+12 OK  https://au.sports.yahoo.com/afl/a/31561733/afl-players-accept-fines/
+13 OK  https://au.sports.yahoo.com/afl/a/31563145/no-danger-of-hype-for-crows-coach/
+14 OK  https://au.sports.yahoo.com/afl/a/31563751/wells-hopes-to-play-against-bombers/
+15 OK  https://au.sports.yahoo.com/afl/a/31562663/rockliff-to-miss-two-to-three-afl-games/
+16 OK  https://au.sports.yahoo.com/afl/video/watch/31561952/harden-up-buckley-tells-magpies-club/
+17 OK  https://au.sports.yahoo.com/afl/a/31555156/eddie-mcguire-collingwood-magpies-president-considered-quitting-after-carlton-loss/
+18 OK  https://au.sports.yahoo.com/afl/video/watch/31557833/eagles-can-t-win-grand-final-says-afl-great/
+19 OK  https://au.sports.yahoo.com/afl/video/watch/31557323/power-s-charlie-dixon-struggling-with-extra-attention/
+20 OK  https://au.sports.yahoo.com/afl/video/watch/31557299/crows-prepare-for-friday-night-date-with-dangerfield/
+21 OK  https://au.sports.yahoo.com/afl/video/watch/31557263/mapgpie-travis-cloke-reveals-future-plans/
+22 OK  https://au.sports.yahoo.com/afl/a/31555286/no-suspensions-from-round-seven-of-afl/
+23 OK  https://au.sports.yahoo.com/afl/a/31556178/dangerfield-just-another-player-crows/
+24 OK  https://au.sports.yahoo.com/afl/a/31556365/orange-army-growing-for-afl-giants/
+25 OK  https://au.sports.yahoo.com/afl/a/31556794/swans-defender-ted-richards-set-to-return/
+26 OK  https://au.sports.yahoo.com/afl/a/31556793/baby-bombers-learn-from-beltings-goddard/
+27 OK  https://au.sports.yahoo.com/afl/a/31554534/afl-talking-to-crows-over-umpiring/
+28 OK  https://au.sports.yahoo.com/afl/a/31554536/afl-to-ask-fans-about-shot-clock/
+29 OK  https://au.sports.yahoo.com/afl/a/31554665/ports-dixon-coping-with-afl-bubble/
+30 OK  https://au.sports.yahoo.com/afl/a/31552823/demons-look-for-afl-consistency/
+31 OK  https://au.sports.yahoo.com/afl/video/watch/31554358/pearce-dribbles-one-home/
+32 OK  https://au.sports.yahoo.com/afl/video/watch/31554262/puopolo-takes-an-absolute-screamer/
+33 OK  https://au.sports.yahoo.com/afl/a/31550767/afl-brisbane-lions-sweat-on-tom-rockliff-injury/
+34 OK  https://au.sports.yahoo.com/afl/video/watch/31553860/kangaroos-lucky-to-win-scott/
+35 OK  https://au.sports.yahoo.com/afl/a/31553718/five-key-points-from-afl-round-7-buckley-bontempelli/
+36 OK  https://au.sports.yahoo.com/afl/a/31553309/suns-coach-backs-ablett-to-bounce-back/
+37 OK  https://au.sports.yahoo.com/afl/a/31551999/afl-stevos-sting-north-melbournes-mason-wood-shot-clock/
+38 OK  https://au.sports.yahoo.com/afl/video/watch/31550985/injury-woes-for-brisbane-after-adelaide-oval-hiding/
+39 OK  https://au.sports.yahoo.com/afl/video/watch/31550976/drew-petrie-celebrates-300th-game-with-win-over-saints/
+40 OK  https://au.sports.yahoo.com/afl/a/31553672/no-charges-laid-against-hawks-afl-duo/
+41 OK  https://au.sports.yahoo.com/afl/a/31548909/port-thump-brisbane-in-afl/
+42 OK  https://au.sports.yahoo.com/afl/video/watch/31549456/afl-highlight-port-adelaide-demolish-brisbane/
+43 OK  https://au.sports.yahoo.com/afl/a/31329930/vince-accepts-one-match-ban/
+44 OK  https://au.sports.yahoo.com/afl/a/31549412/afl-life-continues-after-30-for-stars/
+45 OK  https://au.sports.yahoo.com/afl/a/31548120/afl-results-north-melbourne-kangaroos-beat-st-kilda-drew-petrie-300/
+46 OK  https://au.sports.yahoo.com/afl/a/31545061/gws-coach-meets-with-homesick-mccarthy/
+47 OK  https://au.sports.yahoo.com/afl/a/31544009/dogs-hold-nerve-in-afl-win-over-crows/
+48 OK  https://au.sports.yahoo.com/afl/a/31544006/gary-ablett-makes-off-field-gold-coast-suns-impact/
+49 OK  https://au.sports.yahoo.com/afl/a/31544881/dangerfield-prepares-to-face-adelaide/
+50 OK  https://au.sports.yahoo.com/afl/a/31544984/winning-not-the-priority-for-dockers/
+51 OK  https://au.sports.yahoo.com/afl/a/31544012/cruelled-crows-fume-on-afl-umpiring/
+52 OK  https://au.sports.yahoo.com/afl/video/watch/31544316/gary-ablett-in-heated-exchange-with-angry-fans/
+53 OK  https://au.sports.yahoo.com/afl/video/watch/31544282/gary-ablett-involved-in-heated-exchange-with-angry-fan/
+54 OK  https://au.sports.yahoo.com/afl/a/31544011/roos-keeps-lid-on-demons-romp/
+55 OK  https://au.sports.yahoo.com/afl/a/31543684/afl-results-greater-wester-sydney-gws-goants-beat-fremantle-dockers/
+56 OK  https://au.sports.yahoo.com/afl/video/watch/31543744/afl-highlights-western-bulldogs-beat-adelaide-crows/
+57 OK  https://au.sports.yahoo.com/afl/a/31543641/afl-results-bulldogs-hold-off-crows-in-afl/
+58 OK  https://au.sports.yahoo.com/afl/a/31543356/afl-results-sydney-swans-beat-essendon/
+59 OK  https://au.sports.yahoo.com/afl/a/31543510/demons-thrash-suns-by-73-points/
+60 OK  https://au.sports.yahoo.com/afl/a/31542807/afl-results-carlton-beat-collingwood-for-third-win-in-a-row/
+61 OK  https://au.sports.yahoo.com/afl/a/31542873/afl-results-geelong-defeat-west-coast-by-44-points/
+62 OK  https://au.sports.yahoo.com/afl/a/31542365/north-melbourne-out-to-win-for-petrie/
+63 OK  https://au.sports.yahoo.com/afl/a/31540543/tigers-lose-again-in-afl/
+64 OK  https://au.sports.yahoo.com/afl/video/watch/31541130/the-hawks-pile-on-the-pain/
+65 OK  https://au.sports.yahoo.com/afl/a/31540675/hawks-shine-without-mitchell-in-afl-win/
+66 OK  https://au.sports.yahoo.com/afl/a/31540674/port-coach-wants-afl-rucks-to-break-even/
+67 OK  https://au.sports.yahoo.com/afl/a/31538718/afl-hawthorn-hawks-beat-richmond-tigers-by-46-points/
+68 EXISTS  https://au.sports.yahoo.com/afl/a/31539174/nick-riewoldt-likely-to-extend-afl-career/
+69 EXISTS  https://au.sports.yahoo.com/afl/a/31538856/afl-nunawading-lions-warwick-capper-kevin-murray/
+70 OK  https://au.sports.yahoo.com/afl/video/watch/31538733/crows-prepare-to-match-bulldogs-sexy-footy/
+71 EXISTS  https://au.sports.yahoo.com/afl/a/31533412/eade-gives-players-one-last-chance/
+72 OK  https://au.sports.yahoo.com/afl/video/watch/31538061/richmond-bulldogs-need-wins/
+73 EXISTS  https://au.sports.yahoo.com/afl/a/31537809/afl-bernie-vince-once-hit-on-jonathan-browns-wife/
+74 EXISTS  https://au.sports.yahoo.com/afl/a/31536770/afl-kangaroos-wont-be-complacent-says-thompson/
+75 EXISTS  https://au.sports.yahoo.com/afl/a/31536380/port-adelaide-clear-chad-wingard-for-afl-return/
+76 EXISTS  https://au.sports.yahoo.com/afl/a/31533738/revenge-not-driving-western-bulldogs/
+77 EXISTS  https://au.sports.yahoo.com/afl/a/31534220/st-kildas-nick-riewoldt-poised-to-play-on/
+78 OK  https://au.sports.yahoo.com/afl/video/watch/31535017/bulldogs-have-moved-on-from-last-year-beveridge/
+79 EXISTS  https://au.sports.yahoo.com/afl/a/31531366/afl-brendan-goddard-in-talks-to-remain-at-essendon/
+80 EXISTS  https://au.sports.yahoo.com/afl/a/31531386/hawks-roughead-steps-up-knee-recovery/
+81 OK  https://au.sports.yahoo.com/afl/a/31531385/gws-ready-to-bust-perth-hoodoo-in-afl/
+82 ?  https://au.sports.yahoo.com/afl/live-scores/2016014/7/
+83 OK  https://au.sports.yahoo.com/afl/a/31525957/hawks-frawley-doubtful-for-tigers-clash/
+84 OK  https://au.sports.yahoo.com/afl/a/31529746/afl-teams-round-7-ivan-maric-nathan-brown-dropped/
+85 OK  https://au.sports.yahoo.com/afl/video/watch/31529973/teams/
+86 OK  https://au.sports.yahoo.com/afl/video/watch/31529906/hinkley-was-right-to-drop-me-polec/
+87 OK  https://au.sports.yahoo.com/afl/video/watch/31529858/richmond-coach-damien-hardwick-receives-friendly-message-from-rival/
+88 OK  https://au.sports.yahoo.com/afl/a/31529757/afl-teams-round-7/
+89 OK  https://au.sports.yahoo.com/afl/a/31527585/afl-nathan-buckley-rang-damien-hardwicks-wife-richmond-collingwood/
+90 OK  https://au.sports.yahoo.com/afl/video/watch/31528899/nathan-buckley-rang-my-wife-hardwick/
+od_630_1bj29up-1bj29ur.jpg
+2016-05-10 14:57:11 [console] DEBUG: 1 images retrieved for Buckley doing right thing by club: Eddie
+https://s.yimg.com/ea/img/-/160510/573189c4e4a25_3384533_20150726001159668868_original_1280x720-1bj32e4.jpg?x=656&sig=W6HFegM35NXE9qiVjyvJqA--
+2016-05-10 14:57:18 [console] DEBUG: 1 images retrieved for Beveridge backs AFL shot clock
+https://s.yimg.com/ea/img/-/160510/573188d2ba8fc_3384507_20150808001164044084_original_1280x720-1bj326i.jpg?x=656&sig=Id4crg7Va.4Y40OHxsF6Ew--
+2016-05-10 14:57:23 [console] DEBUG: 1 images retrieved for Beveridge hits out at AFL umps criticism
+https://s.yimg.com/iu/api/res/1.2/6LC3rZmd9Z.tj4OBxDZZFw--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/ea/img/-/160510/5730ffdfd813f_gws_giants_port_630_1bj1vtp-1bj1vuv.jpg
+2016-05-10 14:57:24 [console] DEBUG: 1 images retrieved for GWS and Suns head in different directions
+2016-05-10 14:57:24 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:57:24 [console] INFO: Idle, start collecting links
+2016-05-10 14:57:27 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/3/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:57:27 [console] INFO: Collected 21 10
+2016-05-10 14:57:33 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Sydney wary of a third loss against Richmond
+https://s.yimg.com/ea/img/-/160510/57317e0f6ffd2_3384338_20160501001252481368_original_1280x720-1bj2vgf.jpg?x=656&sig=_97XOiL8raQJuYnSPuiXjA--
+2016-05-10 14:57:37 [console] DEBUG: 1 images retrieved for AFL players accept fines
+https://s.yimg.com/ea/img/-/160510/5731786f98cb6_3384208_20160430001252271057_original_1280x720-1bj2u3f.jpg?x=656&sig=.XzMZ4L9rJqQ7vC8o_vtJw--
+2016-05-10 14:57:42 [console] DEBUG: 1 images retrieved for No Danger of hype for Crows coach
+https://s.yimg.com/ea/img/-/160510/573173badd361_3384104_20160429001252009928_original_1280x720-1bj2stq.jpg?x=656&sig=m9b5Doc8HE0M_4oNk0S69w--
+2016-05-10 14:57:46 [console] DEBUG: 1 images retrieved for Wells hopes to play against Bombers
+https://s.yimg.com/ea/img/-/160510/57315bd2c1408_3384052_10may_tomrockliff_1280x720-1bj2mui.jpg?x=656&sig=mx6ScynoBUHsqPTWcTKvtA--
+2016-05-10 14:57:52 [console] DEBUG: 1 images retrieved for Lions worried over Rockliff injuries
+2016-05-10 14:57:53 [scrapy] INFO: Crawled 22 pages (at 22 pages/min), scraped 19 items (at 19 items/min)
+2016-05-10 14:57:54 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:57:54 [console] INFO: Idle, start collecting links
+2016-05-10 14:57:57 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/4/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:57:57 [console] INFO: Collected 31 10
+https://s.yimg.com/ea/img/-/160509/57305209ce514_3383025_20140705000988292308_original_1280x720-1bj0kg9.jpg?x=656&sig=pyrFd_T5QI4RcyfFVtd4pg--
+2016-05-10 14:58:06 [console] DEBUG: 1 images retrieved for No suspensions from round seven of AFL
+https://s.yimg.com/ea/img/-/160509/57304fb4bf3a1_3382973_20160507001254231796_original_1280x720-1bj0jtk.jpg?x=656&sig=HW1BtJziFooRJ.9y.Q9Hpg--
+2016-05-10 14:58:13 [console] DEBUG: 1 images retrieved for Orange army growing for AFL Giants
+https://s.yimg.com/ea/img/-/160509/57304f3a3e446_3382960_20160412001247330043_original_1280x720-1bj0jpq.jpg?x=656&sig=TWEIYbPd4ksvxt5E78HWhw--
+2016-05-10 14:58:17 [console] DEBUG: 1 images retrieved for Swans defender Richards set to return
+2016-05-10 14:58:20 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:58:20 [console] INFO: Idle, start collecting links
+2016-05-10 14:58:22 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/5/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:58:22 [console] INFO: Collected 41 10
+https://s.yimg.com/iu/api/res/1.2/AADRsMQdjxyoOKjn1R6Axw--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/ea/img/-/160509/572fe022bdbce_thumb_9mar_ablett_1280x720-1bivo12.jpg
+2016-05-10 14:58:28 [console] DEBUG: 1 images retrieved for Ablett down but not out: Suns coach
+https://s.yimg.com/iu/api/res/1.2/jYzjFFnaPDqLrSDuniGK6w--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160508/Nathan_Buckley_Collingwood_630.jpg
+https://s.yimg.com/iu/api/res/1.2/CpXeild1BagjT1ox2rmT3A--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160508/Mason_Wood_630.jpg
+2016-05-10 14:58:29 [console] DEBUG: 2 images retrieved for Five key points from AFL round 7
+https://s.yimg.com/iu/api/res/1.2/CpXeild1BagjT1ox2rmT3A--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160508/Mason_Wood_630.jpg
+2016-05-10 14:58:30 [console] DEBUG: 1 images retrieved for Stevos Sting - Times up! The shot clock HAS to go
+2016-05-10 14:58:30 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:58:30 [console] INFO: Idle, start collecting links
+2016-05-10 14:58:32 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/6/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:58:32 [console] INFO: Collected 51 10
+https://s.yimg.com/ea/img/-/160412/3343414_12apr_bernievince_1280x720-1bgouah.jpg?x=656&sig=b7AP7X4blvN8A4ZDRhaipw--
+2016-05-10 14:58:37 [console] DEBUG: 1 images retrieved for Vince accepts one-match ban
+https://s.yimg.com/ea/img/-/160508/572e9f82137a4_3381270_20150418001123254272_original_1280x720-1bit7s1.jpg?x=656&sig=l7UidSplgFp9m_r2qblAaQ--
+2016-05-10 14:58:42 [console] DEBUG: 1 images retrieved for GWS coach meets with homesick McCarthy
+https://s.yimg.com/ea/img/-/160508/572ef70002f57_drew_petrie_630_1bittn2-1bittnv.jpg
+2016-05-10 14:58:46 [console] DEBUG: 1 images retrieved for North win puts focus on AFL shot clock
+https://s.yimg.com/ea/img/-/160508/572e9a59ac718_3381218_20160416001248498806_original_1280x720-1bit6ip.jpg?x=656&sig=YTRZmrTbvyD5Ytf0Fb5I7A--
+2016-05-10 14:59:04 [console] DEBUG: 1 images retrieved for Dogs hold nerve in AFL win over Crows
+2016-05-10 14:59:05 [scrapy] INFO: Crawled 55 pages (at 33 pages/min), scraped 48 items (at 29 items/min)
+https://s.yimg.com/ea/img/-/160508/572e98f28a731_3381192_20160501001252292058_original_1280x720-1bit67i.jpg?x=656&sig=EOLh2455CHVPfMrLhRIfzQ--
+2016-05-10 14:59:10 [console] DEBUG: 1 images retrieved for Dangerfield prepares to face Adelaide
+https://s.yimg.com/ea/img/-/160508/572e97147381d_3381166_20160402001244525932_original_1280x720-1bit5ok.jpg?x=656&sig=kv3fz4jmE9W9MoYukRGzVg--
+2016-05-10 14:59:14 [console] DEBUG: 1 images retrieved for Winning not the priority for Dockers
+2016-05-10 14:59:14 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:59:14 [console] INFO: Idle, start collecting links
+2016-05-10 14:59:18 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/7/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:59:18 [console] INFO: Collected 61 10
+https://s.yimg.com/ea/img/-/160507/572decd3e6d4e_gws_630_1birr5h-1birr6j.jpg
+2016-05-10 14:59:26 [console] DEBUG: 1 images retrieved for Dockers winless after going down to GWS
+https://s.yimg.com/ea/img/-/160507/572dcc92d22f3_3380594_070516m_swansbombers_1280x720-1birj4i.jpg?x=656&sig=R.4A13a21GXxoxOjXmHeRA--
+2016-05-10 14:59:30 [console] DEBUG: 1 images retrieved for Buddy, Heeney combine to blitz Bombers
+https://s.yimg.com/ea/img/-/160507/572dd50252292_070516m_sunsdemons_1280x720-1birl82.jpg?x=656&sig=XO.Eq5pv.x5nC19Z8SPw4g--
+2016-05-10 14:59:34 [console] DEBUG: 1 images retrieved for Gawn inspires Melbourne romp over Suns
+https://s.yimg.com/ea/img/-/160507/572dd231747c0_3380659_070516m_magpiesblues_1280x720-1birkhh.jpg?x=656&sig=nwKX5oApGaeDIDnPaW.QLg--
+2016-05-10 14:59:49 [console] DEBUG: 1 images retrieved for Blues beat Pies for three AFL wins in row
+2016-05-10 14:59:49 [console] INFO: Waiting for video processes to complete...
+2016-05-10 14:59:49 [console] INFO: Idle, start collecting links
+2016-05-10 14:59:51 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/8/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 14:59:51 [console] INFO: Collected 71 10
+2016-05-10 14:59:53 [scrapy] INFO: Crawled 68 pages (at 13 pages/min), scraped 60 items (at 12 items/min)
+https://s.yimg.com/ea/img/-/160507/572db0ea31ae8_3380386_070516m_catseagles_1280x720-1birc79.jpg?x=656&sig=BO6ll.QuMHEJBcuBR0IQUg--
+2016-05-10 15:00:00 [console] DEBUG: 1 images retrieved for Scott happy with Cats win over Eagles
+https://s.yimg.com/ea/img/-/160507/572d30f237a1e_3379801_20160506001253975069_original_1280x720-1biqc7i.jpg?x=656&sig=FL7UFKaGiJuy9cxqx0IIZg--
+2016-05-10 15:00:03 [console] DEBUG: 1 images retrieved for Tigers lose again in AFL
+https://s.yimg.com/ea/img/-/160507/572d8911e6488_3380256_070516m_drewpetrie_1280x720-1bir28h.jpg?x=656&sig=sgKsRL.Sjffrs.70fjiPoA--
+2016-05-10 15:00:07 [console] DEBUG: 1 images retrieved for North Melbourne out to win for Petrie
+2016-05-10 15:00:07 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Riewoldt likely to extend AFL career
+https://s.yimg.com/ea/img/-/160506/572c931b4ace2_gettyimages_528548258_1bip4ks-1bip4or.jpg
+2016-05-10 15:00:08 [console] DEBUG: 1 images retrieved for Undermanned Hawks belt Tigers in AFL
+2016-05-10 15:00:11 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/AFL legends chip in to help worst footy team in Australia
+2016-05-10 15:00:12 [console] INFO: Waiting for video processes to complete...
+2016-05-10 15:00:12 [console] INFO: Idle, start collecting links
+2016-05-10 15:00:15 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/9/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 15:00:15 [console] INFO: Collected 81 10
+2016-05-10 15:00:18 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Eade spares Suns the axe - for now
+2016-05-10 15:00:21 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Bernie Vince accidentally hit on Jonathan Browns wife
+2016-05-10 15:00:21 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Ladder leaders must lift: North defender
+2016-05-10 15:00:21 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Port clear Wingard for AFL return
+2016-05-10 15:00:21 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Revenge not driving Western Bulldogs
+2016-05-10 15:00:25 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Saints form keeps McCartin out
+2016-05-10 15:00:25 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Goddard in talks to remain at Essendon
+2016-05-10 15:00:25 [console] WARNING: Article path exists, skipping: OUT_DATA/au.sports.yahoo.com/Hawks Roughead steps up knee recovery
+2016-05-10 15:00:25 [console] INFO: Waiting for video processes to complete...
+2016-05-10 15:00:25 [console] INFO: Idle, start collecting links
+2016-05-10 15:00:27 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/10/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 15:00:27 [console] INFO: Collected 91 10
+https://s.yimg.com/iu/api/res/1.2/2S8uu67RGoqrGZ8qJM6lig--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/ea/img/-/160506/572bccb8a9d26_gws_giants_port_630_1binj5i-1binj5o.jpg
+2016-05-10 15:00:31 [console] DEBUG: 1 images retrieved for GWS ready to bust Perth hoodoo in AFL
+2016-05-10 15:00:34 [console] INFO: No article text https://au.sports.yahoo.com/afl/a/31529757/afl-teams-round-7/
+https://s.yimg.com/iu/api/res/1.2/PD1uAyj2.GPL22hAMQWyWg--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/tigers.jpg
+https://s.yimg.com/iu/api/res/1.2/9FWG7kxhqI2E1.acJUy3Tg--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/hawks.jpg
+https://s.yimg.com/iu/api/res/1.2/U2v_BAFnKc4RY_55B96_eQ--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/pies.jpg
+https://s.yimg.com/iu/api/res/1.2/w6hmhteLF_G7.AkVSKfo_Q--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/blues.jpg
+https://s.yimg.com/iu/api/res/1.2/es8bZ16D2BxJIAk7mIKVHw--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/cats.jpg
+https://s.yimg.com/iu/api/res/1.2/1NjoUSj1MKDqRqv4mTEBpA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/eagles.jpg
+https://s.yimg.com/iu/api/res/1.2/Y2IMJKB2PbiNbRRV0jASmg--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/swans.jpg
+https://s.yimg.com/iu/api/res/1.2/HMbVy7V3g2i64ET2LHXnfQ--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/bombers.jpg
+https://s.yimg.com/iu/api/res/1.2/63Ie7jCljopVlIVUjHnFwA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/suns.jpg
+https://s.yimg.com/iu/api/res/1.2/7daI6G7flcSJ3mAGhhL_Fw--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/dees.jpg
+https://s.yimg.com/iu/api/res/1.2/XVMMrC5t.2MJlGqJEefEjA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/dogs.jpg
+https://s.yimg.com/iu/api/res/1.2/mGNxWKBvIAFGeWji6va23A--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/crows.jpg
+https://s.yimg.com/iu/api/res/1.2/gdKtNKQ6wP8eRttjtsEWPQ--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/dockers.jpg
+https://s.yimg.com/iu/api/res/1.2/A0WWmabslK6WGpRn2vkdvA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/gws.jpg
+https://s.yimg.com/iu/api/res/1.2/MThgpGRlybskn5vXntWvtA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/saints.jpg
+https://s.yimg.com/iu/api/res/1.2/Ae63x52Sfe8C0RA2tYzClw--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/roos.jpg
+https://s.yimg.com/iu/api/res/1.2/TPXhoQ69oxfbk4EZlvRy9Q--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/port.jpg
+https://s.yimg.com/iu/api/res/1.2/WvpTmJqtKgTE.Bmuw2Ic7Q--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160505/lions.jpg
+2016-05-10 15:00:55 [console] DEBUG: 18 images retrieved for AFL teams: Round 7
+2016-05-10 15:00:55 [scrapy] INFO: Crawled 100 pages (at 32 pages/min), scraped 77 items (at 17 items/min)
+https://s.yimg.com/iu/api/res/1.2/M044ECh0kMxDdJmzwb68UQ--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/dh/ap/default/160504/GettyImages-156812579.jpg
+2016-05-10 15:00:56 [console] DEBUG: 1 images retrieved for Why hes got my wifes phone number Im not too sure
+2016-05-10 15:00:56 [console] INFO: Waiting for video processes to complete...
+2016-05-10 15:00:56 [console] INFO: Idle, start collecting links
+2016-05-10 15:00:58 [console] INFO: Next page: https://au.sports.yahoo.com/data/collection/11/?pp=10&pu=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6c3VicHJvcGVydHk=&pau=bXVsdGlwYXNzOmFydGljbGVzOmxpc3Q6YWpheA==&c=YXVzcG9ydC9BRkwvaG9tZS1zdHJlYW0=&f=TUFTT05SWQ==&si=&o=0&sbt=&canonical=au.ausport&y7_property=ausport&rfa=bm8=&bucket=bc_player_B1
+2016-05-10 15:00:58 [console] INFO: Collected 101 10
+^Chttps://s.yimg.com/iu/api/res/1.2/qRffKaKrxxrY_TAnqXMYOA--/cm90YXRlPWF1dG87dz02NDA7YXBwaWQ9eXZpZGVv/https://s.yimg.com/ea/img/-/160505/thumb_3376759_20101116000279511331_original_1280x720-1biku6r.jpg
+2016-05-10 15:01:07 [console] DEBUG: 1 images retrieved for Giants boss threatens to quit AFL club
+2016-05-10 15:01:07 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 61762,
+ 'downloader/request_count': 112,
+ 'downloader/request_method_count/GET': 112,
+ 'downloader/response_bytes': 2626280,
+ 'downloader/response_count': 112,
+ 'downloader/response_status_count/200': 111,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2016, 5, 10, 8, 1, 7, 719617),
+ 'item_dropped_count': 11,
+ 'item_dropped_reasons_count/DropItem': 11,
+ 'item_scraped_count': 89,
+ 'log_count/DEBUG': 36,
+ 'log_count/INFO': 44,
+ 'log_count/WARNING': 11,
+ 'request_depth_max': 1,
+ 'response_received_count': 111,
+ 'scheduler/dequeued': 112,
+ 'scheduler/dequeued/memory': 112,
+ 'scheduler/enqueued': 112,
+ 'scheduler/enqueued/memory': 112,
+ 'start_time': datetime.datetime(2016, 5, 10, 7, 56, 53, 226470)}
