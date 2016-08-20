@@ -1,9 +1,10 @@
 
 from scrapy import Item, Field
+from mirror0.generic_spider import StateItem
 
-class YahooItem(Item):
-    def __init__(self, spider=None):
-        super(YahooItem, self).__init__()
+class YahooItem(StateItem):
+    #def __init__(self, spider=None):
+    #    super(YahooItem, self).__init__()
 
     raw_text = Field()
     raw_html = Field()

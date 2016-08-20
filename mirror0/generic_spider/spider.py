@@ -187,11 +187,13 @@ class Spider(scrapy.Spider):
     def _request_failed(self, failure):
         log("Failed: %s" % str(failure), ERROR)
 
+        """ HttpError ?
         if isinstance(failure.value, spidermiddlewares.HttpError):
             response = failure.value.response
             log("Code ", str(response.status))
         else:
-            log("Failed miserably: %s" % str(failure))
+            log("Failed miserably: %s" % str(failure))"""
+        log("Failed: %s" % str(failure))
 
     def _run_item(self, response):
         try:

@@ -86,7 +86,7 @@ def run():
     elif "yahoo" == keys.spider_name:
         urls = YahooSpider.create_start_urls() 
         YahooSpider.init_idx_log()
-        process.crawl(YahooSpider, start_url=urls[0])
+        process.crawl(YahooSpider, start_url=urls[0], **keys_args)
     elif "afl" == keys.spider_name:
         urls = AflSpider.create_start_urls() 
         AflSpider.init_idx_log()

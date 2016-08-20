@@ -1,6 +1,9 @@
 
 import json
 from logging import ERROR, DEBUG, WARNING
+
+import logging
+import json
 import os
 import os.path
 import shutil
@@ -32,7 +35,6 @@ class StreamPipeline(object):
         pass 
 
     def process_item(self, item, spider):
-        #log("Stream pipeline {0}".format(item['raw_url']), DEBUG)
         if NO_VIDEO or ('skip_video' in item and item['skip_video']):
             return item
 
@@ -42,7 +44,6 @@ class StreamPipeline(object):
             #check if already downloaded (or tried to) and link to previously saved path
             if self._no_duplicates:
                 video_fname = self.get_video_filename(item)
-                print "checking {0}".format(video_fname)
                 if video_fname:
                     if video_fname in self.__downloaded_files:
                        ln_to = os.path.join(self.__downloaded_files[video_fname], video_fname)
@@ -58,14 +59,14 @@ class StreamPipeline(object):
                         #remember fname immediately, if not done before. don't wanna wait results
                         #making things more complex. want to exclude duplicates of not-yet-finished videos.
                         self.__downloaded_files[video_fname] = item['path']
-                        print "added {0}".format(video_fname)
+                        #print "added {0}".format(video_fname)
 
             logfile_path = item['vlog'].file_path
             logfile = open(logfile_path, "w", 0)
 
             timeout = get_project_settings().get('DOWNLOAD_TIMEOUT', 30)
             data_dir = item['path']
-            cmdline = "youtube-dl "
+            cmdline = "youtube-dl --no-warnings "
             if int(Config.value(mirror0.SECTION_COMMON, "hls_prefer_native")):
                 cmdline += "--hls-prefer-native "
             cmdline += "--no-part --socket-timeout {0} ".format(timeout)
@@ -75,12 +76,13 @@ class StreamPipeline(object):
             logfile.write(cmdline + "\n")
 
             self._sub_proc.append(
-                (subprocess.Popen([cmdline], stdout=logfile.fileno(), stderr=subprocess.STDOUT, shell=True),
+                (subprocess.Popen([cmdline], stdout=logfile.fileno(), stderr=logfile.fileno(), shell=True), #stderr=subprocess.STDOUT,
                  logfile,
                  logfile_path,
                  item['raw_url'],),
                 )
 
+            #for key, value in logging.Logger.manager.loggerDict.iteritems():
 
         except Exception as e:
             format_exc(self, "porcess_item", e)
@@ -90,7 +92,7 @@ class StreamPipeline(object):
     """do not download yet but only enquire video file name in advance"""
     def get_video_filename(self, item):
         try:
-            cmdline = "youtube-dl --get-filename -o '%(title)s.%(ext)s' "
+            cmdline = "youtube-dl --no-warnings --get-filename -o '%(title)s.%(ext)s' "
             cmdline += item['raw_url']
             process = subprocess.Popen([cmdline], stdout=subprocess.PIPE, stderr=None, shell=True)
             out_err_tpl = process.communicate()
@@ -115,7 +117,7 @@ class StreamPipeline(object):
             log("Waiting for video processes to complete...")
             i = len(self._sub_proc)
             for process, logfile, logfile_path, url in self._sub_proc:
-                print "Left %i, %s" % (i, logfile_path)
+                print "Left %i" % (i)
                 if self._no_duplicates:
                     tail_proc = subprocess.Popen(["tail", "-f", "-n", "1", logfile_path], stdout=None, stderr=None)
                 process.communicate()
