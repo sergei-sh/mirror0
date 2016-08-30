@@ -28,14 +28,17 @@ class StreamPipeline(object):
     STATE_NOVID = "NOVID"
 
     __downloaded_files = {}
+    __vcounter = 0
 
     def __init__(self):
         self._sub_proc = []
         self._no_duplicates = int(Config.value(mirror0.SECTION_COMMON, "no_duplicate_videos"))
+
+        self.download_url_field = "raw_url"
         pass 
 
     def process_item(self, item, spider):
-        if NO_VIDEO or ('skip_video' in item and item['skip_video']):
+        if NO_VIDEO or ('skip_video' in item and item['skip_video']) or not item[self.download_url_field]:
             return item
 
         spider.video_processor = self
@@ -50,7 +53,7 @@ class StreamPipeline(object):
                        #if os.path.isfile(ln_to):
                        ln_from = os.path.join(item['path'], video_fname)
                        rln = self._call(["ln", "-s", "-f", "--no-dereference", ln_to, ln_from])
-                       url = item['raw_url']
+                       url = item["raw_url"]
                        log("Linking {0} to {1} for {2}".format(ln_from, ln_to, url), DEBUG)
                        spider.start_state(url, self.STATE_ID)
                        spider.finalize_state(url, self.STATE_ID)
@@ -71,15 +74,18 @@ class StreamPipeline(object):
                 cmdline += "--hls-prefer-native "
             cmdline += "--no-part --socket-timeout {0} ".format(timeout)
             cmdline += "-o '%s" % data_dir  
-            cmdline += "/%(title)s.%(ext)s' "
-            cmdline += item['raw_url']
+            cmdline += "/%(title)s-{0}.%(ext)s' ".format(self.__vcounter)
+            cmdline += item[self.download_url_field]
             logfile.write(cmdline + "\n")
+            self.__vcounter += 1
+
+            log("Starting {0} for {1}".format(item[self.download_url_field], item["raw_url"]), DEBUG)
 
             self._sub_proc.append(
                 (subprocess.Popen([cmdline], stdout=logfile.fileno(), stderr=logfile.fileno(), shell=True), #stderr=subprocess.STDOUT,
                  logfile,
                  logfile_path,
-                 item['raw_url'],),
+                 item["raw_url"],),
                 )
 
             #for key, value in logging.Logger.manager.loggerDict.iteritems():
@@ -93,7 +99,7 @@ class StreamPipeline(object):
     def get_video_filename(self, item):
         try:
             cmdline = "youtube-dl --no-warnings --get-filename -o '%(title)s.%(ext)s' "
-            cmdline += item['raw_url']
+            cmdline += item[self.download_url_field]
             process = subprocess.Popen([cmdline], stdout=subprocess.PIPE, stderr=None, shell=True)
             out_err_tpl = process.communicate()
             return out_err_tpl[0].strip()

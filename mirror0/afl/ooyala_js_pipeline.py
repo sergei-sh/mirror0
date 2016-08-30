@@ -25,7 +25,7 @@ class OoyalaJSPipeline(MediaPipelineEx):
     STATE_ID = OOYALA_JS_ID
 
     def __del__(self):
-        sefl.__cleanup() 
+        self.__cleanup() 
 
     def close_spider(self, spider):
         self.__cleanup()

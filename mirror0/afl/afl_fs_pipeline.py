@@ -3,9 +3,6 @@ import os.path
 
 from mirror0.generic_spider import FSCreatorPipeline
 from mirror0.sscommon.aux import url_path
-#from mirror0 import Config
-#from mirror0 import *
-
 
 class AflFSPipeline(FSCreatorPipeline):
     def __init__(self):

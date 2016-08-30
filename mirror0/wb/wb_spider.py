@@ -45,7 +45,6 @@ class WbSpider(mirror0.generic_spider.Spider):
         try:
             mirror0.generic_spider.Spider.__init__(self, **kw)
             self.less_vid = kw.get('less_vid', False)
-            self._per_url_regex_xpath = {}
 
         except Exception as e:
             format_exc(self, "__init__", e)
@@ -58,9 +57,12 @@ class WbSpider(mirror0.generic_spider.Spider):
         try:
             if self.HOME_PAGE == response.url:
                 match_info = response.xpath("//div[@class='buttons']/a[contains(text(), 'Match Information')]/@href").extract_first()
-                pos = match_info.find("#")
-                links = [match_info[:pos]]
-                return links
+                if match_info:
+                    pos = match_info.find("#")
+                    links = [match_info[:pos]]
+                    return links
+                else:
+                    return [] 
         
             links =  response.xpath("//div[re:test(@class, 'list-item')][not(ancestor::*[re:test(@class, 'double-col')])]/div[re:test(@class, 'inner')]/h4/a/@href").extract()
             """if not links:

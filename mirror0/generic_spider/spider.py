@@ -65,7 +65,6 @@ class Spider(scrapy.Spider):
 
             """attributes to be overridden"""
             self._index = NotImplementedError()
-            self._per_url_regex_xpath = NotImplementedError()
             self.disabled_pipelines = []
 
             self._page_count = 0
@@ -94,22 +93,38 @@ class Spider(scrapy.Spider):
             log("\n\nSTART: %s" % self.start_url, INFO)
             self.logidx("\nLog for %s started %s" % (self.start_url, time.strftime("%b %d %H:%M:%S %Y")))
 
-            self._per_url_regex_xpath = {}
+            self._per_url_regex_xpath = () 
+            self._debug_url = ""
 
         except Exception as e:
             format_exc(self, "__init__", e)
 
     def start_requests(self):
         try:
-            yield self._request(
-                url_=self.start_url,
-                callback_=self._collect_next_page_links,
-                )
+            try:
+                self._debug_url = Config.value(mirror0.SECTION_COMMON, "debug_url") 
+            except Exception:
+                pass
+            if self._debug_url:
+                for url in str.splitlines(self._debug_url):
+                    if url:
+                        yield self._request(
+                                url_=url, 
+                                callback_=self._run_item,
+                                errback_=self._request_failed,
+                                dont_filter_=True,)
+            else:
+                yield self._request(
+                    url_=self.start_url,
+                    callback_=self._collect_next_page_links,
+                    )
         except Exception as e:
             format_exc(self, "start_requests", e)
 
 
     def start_state(self, url, state_id):
+        if self._debug_url:
+            return
         assert url in self._links, "Spider.start: bad url"
         if "?" == self._links[url]:
             self._links[url] = ObjectStateIndicators()
@@ -136,7 +151,7 @@ class Spider(scrapy.Spider):
             format_exc(self, "_index_successful", e)
 
     def spider_close(self, spider):
-        super(AflSpider, self).spider_close(spider)
+        super(Spider, self).spider_close(spider)
         self._spider_idle(spider)
 
     def _spider_idle(self, spider):
@@ -144,10 +159,10 @@ class Spider(scrapy.Spider):
         """Collect more links, starting from the place previously stopped"""
         try:
             log("Spider {0} idle start".format(self.name), DEBUG)
+            if self.video_processor:
+                self.video_processor.wait_all_finished(self)
             if self._links or self._existent:
                 #should complete all requests before going further
-                if self.video_processor:
-                    self.video_processor.wait_all_finished(self)
                 self._index_successful()
                 for link, states in self._links.viewitems():
                     self.logidx("%s %s" % (str(states), link))
@@ -178,6 +193,7 @@ class Spider(scrapy.Spider):
             headers={
                 "Accept" : "*/*",
                 "User-Agent" : "Mozilla",
+#"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36" 
             },
             meta=meta_,
             dont_filter=dont_filter_,
@@ -199,8 +215,7 @@ class Spider(scrapy.Spider):
         try:
             url = response.request.url
             if not url in self._links:
-                log("Discarding: %s" % url, WARNING)
-                return
+                log("Response url doesn't match: %s" % url, INFO)
             item = self._item_class(self)
             item['raw_url'] = url
             response = self._prepare_response(response)
@@ -211,7 +226,7 @@ class Spider(scrapy.Spider):
             format_exc(self, "_run_item", e)
 
     def _links_from_response_per_url(self, response):
-        for lregex, lxpath in self._per_url_regex_xpath.viewitems():
+        for lregex, lxpath in self._per_url_regex_xpath:
             if re.search(lregex, response.url):
                 links = response.xpath(lxpath).extract()
                 return links
@@ -239,10 +254,10 @@ class Spider(scrapy.Spider):
                 self.logidx("NO SHOW MORE %s" % response.request.url, response.body)
 
             try:
-                debug_link = Config.value(mirror0.SECTION_COMMON, "debug_link")
-                print(debug_link)
-                if debug_link:
-                    links = [lnk for lnk in links if re.search(debug_link, lnk)]
+                debug_link_regex = Config.value(mirror0.SECTION_COMMON, "debug_link_regex")
+                print(debug_link_regex)
+                if debug_link_regex:
+                    links = [lnk for lnk in links if re.search(debug_link_regex, lnk)]
             except Exception:
                 pass
 

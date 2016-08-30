@@ -99,14 +99,14 @@ class FoxsportsSpider(mirror0.generic_spider.Spider):
                 for sel_item in response.selector.xpath("//li[re:test(@class,'fiso-video-mosaic')]"):
                     url = sel_item.xpath("./descendant::meta[@itemprop='contentURL']/@content").extract_first()
                     if url:
-                        debug_link = ""
+                        debug_link_regex = ""
                         try:
-                            debug_link = Config.value(mirror0.SECTION_COMMON, "debug_link")
+                            debug_link_regex = Config.value(mirror0.SECTION_COMMON, "debug_link_regex")
                         except Exception:
                             pass
 
-                        if debug_link:
-                            if not re.search(debug_link, url):
+                        if debug_link_regex:
+                            if not re.search(debug_link_regex, url):
                                  continue
                         title = sel_item.xpath("./descendant::meta[@itemprop='headline name']/@content").extract_first()
                         time = sel_item.xpath("./descendant::meta[@itemprop='uploadDate']/@content").extract_first()

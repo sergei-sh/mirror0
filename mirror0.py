@@ -2,7 +2,6 @@
 import argparse
 from distutils import dir_util
 import logging
-import logging.config
 import os
 import sys
 from subprocess import call
@@ -23,6 +22,7 @@ from mirror0 import Config
 from mirror0.foxsports.foxsports_spider import FoxsportsSpider
 from mirror0.watoday.watoday_spider import WatodaySpider
 from mirror0.yahoo.yahoo_spider import YahooSpider
+from mirror0.news import NewsSpider
 from mirror0.afl import AflSpider
 import mirror0.afl.afl_spider
 from mirror0.wb import WbSpider
@@ -101,6 +101,11 @@ def run():
         urls = FoxsportsSpider.create_start_urls()
         FoxsportsSpider.init_idx_log()
         runner = SequentialRunner(FoxsportsSpider, urls, process, **keys_args)
+        runner.next()
+    elif "news" == keys.spider_name:
+        urls = NewsSpider.create_start_urls()
+        NewsSpider.init_idx_log()
+        runner = SequentialRunner(NewsSpider, urls, process, **keys_args)
         runner.next()
     else:
         logging.log(logging.ERROR, "Unknown spider name")

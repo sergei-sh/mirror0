@@ -52,9 +52,9 @@ class AflSpider(mirror0.generic_spider.Spider):
           #in this spider videos are downloaded with the framework so no need to wait for additional processes  
             self.video_processor = self
 
-            self._per_url_regex_xpath = {
-                "nabchallenge" : "//h4[@class='partial--finals-video__caption']/a/@href | //h3[re:test(text(), 'News')]/parent::div/parent::div/following::div/div/div[re:test(@class, 'list-item')]/div[re:test(@class, 'inner')]/h4/a/@href",
-            }
+            self._per_url_regex_xpath = (
+                ("nabchallenge" , "//h4[@class='partial--finals-video__caption']/a/@href | //h3[re:test(text(), 'News')]/parent::div/parent::div/following::div/div/div[re:test(@class, 'list-item')]/div[re:test(@class, 'inner')]/h4/a/@href"),
+            )
 
 
         except Exception as e:

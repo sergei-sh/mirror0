@@ -13,7 +13,7 @@ from mirror0 import Config
 from . import time_utils 
 
 class RawExtractorPipeline(object):
-    NAME = __module__
+    NAME = "RawExtractorPipeline"
 
     def __init__(self):
         self._title_x = NotImplementedError()
