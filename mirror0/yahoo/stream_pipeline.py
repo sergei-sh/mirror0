@@ -24,7 +24,7 @@ NO_VIDEO = False
 
 class StreamPipeline(object):
 
-    STATE_ID = "VID"
+    STATE_ID = "S_VID"
     STATE_NOVID = "NOVID"
 
     __downloaded_files = {}

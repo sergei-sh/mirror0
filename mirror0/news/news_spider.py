@@ -17,8 +17,8 @@ class NewsSpider(mirror0.generic_spider.Spider):
             { 
                 'mirror0.news.module1.NewsExtractorPipeline' : 543,
                 'mirror0.afl.afl_fs_pipeline.AflFSPipeline' : 544,
-#                'mirror0.generic_spider.text_image_pipeline.TextImagePipeline': 545,
-#                'mirror0.generic_spider.meta_file_pipeline.MetaFilePipeline': 546,
+                'mirror0.generic_spider.text_image_pipeline.TextImagePipeline': 545,
+                'mirror0.generic_spider.meta_file_pipeline.MetaFilePipeline': 546,
                 'mirror0.news.news_spider.Niux': 547,
                 'mirror0.news.module0.Linja': 548,
             }
@@ -46,17 +46,14 @@ class NewsSpider(mirror0.generic_spider.Spider):
             mirror0.generic_spider.Spider.__init__(self, **kw)
             self._per_url_regex_xpath = ( 
                 (r"video/sport/afl", "//a[@class='vms-list-item module']/@href"), 
-                ("", '//div[@class="story-block "]/h4[@class="heading"]/a/@href'), 
+                ("sport/afl^", '//div[@class="story-block "]/a[@class="thumb-link"]/@href'), #main page
+                ("", '//div[@class="story-block "]/h4[@class="heading"]/a/@href'), #more-stories, clubs 
                 )
 
         except Exception as e:
             format_exc(self, "__init__", e)
 
-#    def _prepare_response(self, response):
-#        return scrapy.http.HtmlResponse(url=response.url, body=response.body)
-
     def _links_from_response(self, response):
-#        response = self._prepare_response(response)
         try:
             links = []
 
@@ -89,6 +86,7 @@ from mirror0.generic_spider import MediaPipelineEx
 from mirror0.sscommon.aux import log, format_exc
 
 class Niux(MediaPipelineEx):
+    STATE_ID = "NIU"
 
     def __init__(self):
         super(self.__class__, self).__init__(dont_filter=True)
@@ -98,6 +96,7 @@ class Niux(MediaPipelineEx):
 
         if item['ooyala_id']:
             try:
+                item.start(self.STATE_ID)
                 url = "http://player.ooyala.com/player_api/v1/metadata/embed_code/89a379a0e1e94feca5bb87c46a8b2d5e/" + item['ooyala_id'] 
                 log("Preparing youtube-dl playlist %s " % (item['raw_url']), DEBUG)
                 request = scrapy.Request(
@@ -125,6 +124,7 @@ class Niux(MediaPipelineEx):
                 vid_name = match.group(0)
                 item['playlist_url'] = "http://newsvidhd-vh.akamaihd.net/i/foxsports/prod/archive/"\
                      + date + "," + vid_name + ",.mp4.csmil/master.m3u8"
+                item.finish(self.STATE_ID)
                 return item
             except Exception as e:
                 log("Y-dl playlist extraction failed %s: %s" % (item['raw_url'], str(e)), ERROR)
