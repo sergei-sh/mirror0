@@ -57,12 +57,6 @@ class NewsSpider(mirror0.generic_spider.Spider):
         try:
             links = []
 
-            if self.HOME_PAGE == response.url:
-                match_info = response.xpath("//div[@class='buttons']/a[contains(text(), 'Match Information')]/@href").extract_first()
-                pos = match_info.find("#")
-                links = [match_info[:pos]]
-                return links
-        
             return links
 
         except Exception as e:
