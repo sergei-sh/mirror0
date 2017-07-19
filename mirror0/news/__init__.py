@@ -1,2 +1,2 @@
 
-from .news_spider import NewsSpider
+from .news_spider import NewsSpider, Niux

@@ -8,7 +8,7 @@ Ver 1.1-b2:
 AFL:
 Each category link should be added to mirror0.ini: [Afl]/start_urls
 Spider names:
-afl yahoo wb watoday foxsports
+afl yahoo wb watoday foxsports news heraldsun
 
 Command line switches:
     --noindex - don't readd/add to index

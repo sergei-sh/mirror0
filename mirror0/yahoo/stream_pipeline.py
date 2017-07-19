@@ -39,6 +39,7 @@ class StreamPipeline(object):
 
     def process_item(self, item, spider):
         if NO_VIDEO or ('skip_video' in item and item['skip_video']) or not item[self.download_url_field]:
+            log("StreamPipeline skipping {}".format(item['raw_url']))
             return item
 
         spider.video_processor = self

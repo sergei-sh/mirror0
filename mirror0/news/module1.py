@@ -31,7 +31,6 @@ class NewsExtractorPipeline(RawExtractorPipeline):
             selector = item['raw_html']
             item['ooyala_id'] = selector.xpath("//div[re:test(@class, 'vms module')]/@vms-embedcode").extract_first()
             if item['ooyala_id']:
-               #print item['ooyala_id']
                log("Matched %s" % item['raw_url'], DEBUG)
             else:
                 item['ooyala_id'] = "" 

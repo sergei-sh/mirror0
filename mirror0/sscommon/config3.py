@@ -1,6 +1,6 @@
 
 
-import ConfigParser 
+from configparser import ConfigParser 
 import time
 import os.path
 import sys
@@ -9,7 +9,7 @@ CONFIG_FILE = os.path.expandvars("$HOME/.mirror0/mirror0.ini")
 
 #singleton config object
 class Config:
-    class ConfigLoader(ConfigParser.ConfigParser, object):
+    class ConfigLoader(ConfigParser, object):
         def __init__(self):
             super(self.__class__, self).__init__()
             if 0 == len(self.read(CONFIG_FILE)):

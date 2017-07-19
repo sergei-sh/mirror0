@@ -1,4 +1,6 @@
 
+from ConfigParser import NoOptionError
+from exceptions import ValueError
 import logging
 from logging import DEBUG, INFO, WARNING, ERROR
 import os
@@ -53,9 +55,6 @@ class Spider(scrapy.Spider):
     def logidx(self, msg, html=None):
         with open(self._idx_file, "a") as f:
             f.write(msg + "\n")
-        """logging.getLogger("linkwise").info(msg)
-        if html:
-            logging.getLogger("html").info("\n" + msg + "\n" + html)"""
 
     def __init__(self, **kw):
         try:
@@ -76,6 +75,7 @@ class Spider(scrapy.Spider):
             self._retry_count = 0
             self._lnk_pos = 0
             self._total_count = 0
+            self._object_cleaner = None
 
             dispatcher.connect(self._spider_idle, scrapy.signals.spider_idle)
 
@@ -87,6 +87,8 @@ class Spider(scrapy.Spider):
             self.__first_page = kw.get('first_page', False)
 
             self.start_url = kw.get('start_url')
+
+            self._object_cleaner = kw.get('object_cleaner') 
 
             if "/" == self.start_url[0]:
                 self.start_url = self.BASE_URL + self.start_url
@@ -101,36 +103,25 @@ class Spider(scrapy.Spider):
 
     def start_requests(self):
         try:
-            try:
-                self._debug_url = Config.value(mirror0.SECTION_COMMON, "debug_url") 
-            except Exception:
-                pass
-            if self._debug_url:
-                for url in str.splitlines(self._debug_url):
-                    if url:
-                        yield self._request(
-                                url_=url, 
-                                callback_=self._run_item,
-                                errback_=self._request_failed,
-                                dont_filter_=True,)
-            else:
-                yield self._request(
-                    url_=self.start_url,
-                    callback_=self._collect_next_page_links,
-                    )
+            yield self._request(
+                url_=self.start_url,
+                callback_=self._collect_next_page_links,
+                )
         except Exception as e:
             format_exc(self, "start_requests", e)
 
 
     def start_state(self, url, state_id):
-        if self._debug_url:
-            return
+        #if self._debug_url:
+        #    return
         assert url in self._links, "Spider.start: bad url"
         if "?" == self._links[url]:
             self._links[url] = ObjectStateIndicators()
         self._links[url].start(state_id)
 
     def finalize_state(self, url, state_id):
+        #if self._debug_url:
+        #    return
         assert url in self._links, "Spider.finalize: bad url"
         self._links[url].finish(state_id)
             
@@ -155,7 +146,6 @@ class Spider(scrapy.Spider):
         self._spider_idle(spider)
 
     def _spider_idle(self, spider):
-
         """Collect more links, starting from the place previously stopped"""
         try:
             log("Spider {0} idle start".format(self.name), DEBUG)
@@ -226,25 +216,49 @@ class Spider(scrapy.Spider):
             format_exc(self, "_run_item", e)
 
     def _links_from_response_per_url(self, response):
-        for lregex, lxpath in self._per_url_regex_xpath:
+        for tpl in self._per_url_regex_xpath:
+            try:
+                lregex, lxpath, webdriver = tpl
+            except ValueError as e:
+                lregex, lxpath = tpl
+                webdriver = ""
+                
+            print lregex, response.url
             if re.search(lregex, response.url):
                 links = response.xpath(lxpath).extract()
-                return links
+                return links, webdriver
+        return None, None 
 
     def _collect_next_page_links(self, response):
         try:
-            links = self._links_from_response_per_url(response)
+            links = ""            
+            webdriver = ""
+            try:
+                self._debug_url = Config.value(mirror0.SECTION_COMMON, "debug_url") 
+                if self._debug_url:
+                    links = [url for url in str.splitlines(self._debug_url) if url]
+                webdriver = "do_use"
+            except Exception:
+                pass
             if not links:
-                links = self._links_from_response(response)
-            if not links:
-                msg = "NO LINKS %s" % response.request.url 
-                log(msg, WARNING)
-                self.logidx(msg, response.body)
+                links, webdriver = self._links_from_response_per_url(response)
+                if not links:
+                    links = self._links_from_response(response)
+                    webdriver = ""
+                if not links:
+                    msg = "NO LINKS %s" % response.request.url 
+                    log(msg, WARNING)
+                    self.logidx(msg, response.body)
+                else:
+                    log("Raw links: {}".format(len(links)), DEBUG)
 
             links = [(self.BASE_URL + lnk if "/" == lnk[0] else lnk) for lnk in links]
-            """DEBUG"""
-            #links[:] = links[:5]
-            """END"""            
+            try:
+                first_n = int(Config.value(mirror0.SECTION_COMMON, "debug_first_n"))
+                links[:] = links[:first_n]
+                log("ONLY FIRST {}".format(first_n))
+            except NoOptionError:
+                pass
 
             next_url = self._extract_next_url(response)
             if next_url:
@@ -279,11 +293,11 @@ class Spider(scrapy.Spider):
             if INDEX_ONLY and next_url:
                 return Spider._request(url_=next_url, callback_=self._collect_next_page_links)
             else:
-                return self._request_next_page_links(next_url)
+                return self._request_next_page_links(next_url, webdriver)
         except Exception as e:
             format_exc(self, "collect_next_page_links", e)
 
-    def _request_next_page_links(self, next_url):
+    def _request_next_page_links(self, next_url, webdriver):
 
         if (len(self._links) >= LINKS_BATCH or not next_url):
             #request articles from collected links
@@ -293,7 +307,8 @@ class Spider(scrapy.Spider):
                     url_=url, 
                     callback_=self._run_item,
                     errback_=self._request_failed,
-                    dont_filter_=True,))
+                    dont_filter_=True,
+                    meta_={"webdriver" : webdriver,},))
                 self._lnk_pos += 1
             self._next_page_url_interrupted = next_url
             #scrapy sends them in the reverse order

@@ -1,3 +1,8 @@
+V 1.6-b1
+-HerladSun support added
+-Logging in using Celenium/PhantomJS, scraping with custom downloader
+-Added webdriver option to per-url regexps
+
 V 1.4-b1
 -Foxsports support added
 -Foxsports concurrent requests per domain set to 1

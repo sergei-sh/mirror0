@@ -7,6 +7,35 @@ chromedriver_path=
 no_duplicate_videos=1
 hls_prefer_native=1
 
+[HeraldSun]
+phantomjs_path=/home/serj/phantomjs/phantomjs
+login=christian@ad-hippo.com
+password=infillpaper01
+start_urls=    
+    /sport/afl/teams/adelaide
+    /sport/afl/teams/brisbane
+    /sport/afl/teams/carlton
+    /sport/afl/teams/collingwood
+    /sport/afl/teams/essendon
+    /sport/afl/teams/fremantle
+    /sport/afl/teams/geelong
+    /sport/afl/teams/gold-coast
+    /sport/afl/teams/gws
+    /sport/afl/teams/hawthorn
+    /sport/afl/teams/melbourne
+    /sport/afl/teams/north-melbourne
+    /sport/afl/teams/port-adelaide
+    /sport/afl/teams/richmond
+    /sport/afl/teams/st-kilda
+    /sport/afl/teams/sydney
+    /sport/afl/teams/west-coast
+    /sport/afl/teams/western-bulldogs
+    /sport/afl/expert-opinion
+    /sport/afl/trade-hq
+    /sport/afl/more-news
+    /video/sport/afl
+    /sport/afl
+
 [Foxsports]
 start_urls=
     /afl

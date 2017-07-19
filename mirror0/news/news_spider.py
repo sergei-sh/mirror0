@@ -81,9 +81,11 @@ from mirror0.sscommon.aux import log, format_exc
 
 class Niux(MediaPipelineEx):
     STATE_ID = "NIU"
+    STATE_TYPE2 = "NIU_TYPE2"
+    request_code = "89a379a0e1e94feca5bb87c46a8b2d5e"
 
     def __init__(self):
-        super(self.__class__, self).__init__(dont_filter=True)
+        super(Niux, self).__init__(dont_filter=True)
 
     def get_media_requests(self, item, info):
         item['playlist_url'] = "" 
@@ -91,7 +93,7 @@ class Niux(MediaPipelineEx):
         if item['ooyala_id']:
             try:
                 item.start(self.STATE_ID)
-                url = "http://player.ooyala.com/player_api/v1/metadata/embed_code/89a379a0e1e94feca5bb87c46a8b2d5e/" + item['ooyala_id'] 
+                url = "http://player.ooyala.com/player_api/v1/metadata/embed_code/{}/{}".format(Niux.request_code, item['ooyala_id'])
                 log("Preparing youtube-dl playlist %s " % (item['raw_url']), DEBUG)
                 request = scrapy.Request(
                     url=url,
@@ -113,9 +115,16 @@ class Niux(MediaPipelineEx):
             try:
                 item = response.meta['item']
                 item['vlog'](response.body)
+                if not match:
+                  item.start(self.STATE_TYPE2)
+                  log("NIU TYPE2 for {}".format(item['raw_url']))
+                  return
                 date = match.group(1)
-                match = re.search(r"[\w]+", response.body[match.end():])
-                vid_name = match.group(0)
+                mend = response.body[match.end():]
+                match = re.search(r"([\w]+).mp4,200000", mend)
+                if not match:
+                    match = re.search(r"([\w]+).mp4,500000", mend)
+                vid_name = match.group(1)
                 item['playlist_url'] = "http://newsvidhd-vh.akamaihd.net/i/foxsports/prod/archive/"\
                      + date + "," + vid_name + ",.mp4.csmil/master.m3u8"
                 item.finish(self.STATE_ID)

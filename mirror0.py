@@ -26,6 +26,7 @@ from mirror0.news import NewsSpider
 from mirror0.afl import AflSpider
 import mirror0.afl.afl_spider
 from mirror0.wb import WbSpider
+from mirror0.heraldsun import HeraldSpider
 
 def init_logging():
     try:
@@ -65,6 +66,19 @@ class SequentialRunner(object):
         if self._urls:
             self.next()    
 
+class CommandAccumulator(object):
+    
+    def __init__(self):
+        self._commands = []
+
+    def add_command(self, command):
+        assert command
+        self._commands.append(command)
+
+    def run_commands(self):
+        for command in self._commands:
+            command()
+
 def run():
 
     init_logging()
@@ -77,7 +91,8 @@ def run():
     keys = parser.parse_args()
     settings = get_project_settings()
     process = CrawlerProcess(settings)
-    keys_args = { 'no_index':keys.noindex, 'less_vid':keys.lessvid, 'first_page':keys.firstpage }
+    cleaner = CommandAccumulator()
+    keys_args = { 'no_index':keys.noindex, 'less_vid':keys.lessvid, 'first_page':keys.firstpage, 'object_cleaner':cleaner }
     if "watoday" == keys.spider_name:
         urls = WatodaySpider.create_start_urls() 
         WatodaySpider.init_idx_log()
@@ -107,9 +122,15 @@ def run():
         NewsSpider.init_idx_log()
         runner = SequentialRunner(NewsSpider, urls, process, **keys_args)
         runner.next()
+    elif "heraldsun" == keys.spider_name:
+        urls = HeraldSpider.create_start_urls()
+        HeraldSpider.init_idx_log()
+        runner = SequentialRunner(HeraldSpider, urls, process, **keys_args)
+        runner.next()
     else:
         logging.log(logging.ERROR, "Unknown spider name")
 
     process.start()
+    cleaner.run_commands()
 
 run()

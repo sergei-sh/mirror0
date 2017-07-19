@@ -2,7 +2,8 @@
 import sys
 import os.path
 import logging
-import urlparse
+#TODO: uncomment
+#import urlparse
 
 def format_exc(self, method, exc):  
     fname = "" 
@@ -23,6 +24,6 @@ def log(msg, level = logging.INFO):
     logging.getLogger().log(level, msg)
 
 def url_path(url):
-    o = urlparse.urlparse(url)
+    #o = urlparse.urlparse(url)
     return o.path[1:]
 

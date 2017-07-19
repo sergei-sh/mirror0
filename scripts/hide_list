@@ -1,9 +1,13 @@
+mirror0/heraldsun/selenium_middleware.py
+mirror0/heraldsun/module0.py
+mirror0/heraldsun/module1.py
+mirror0/heraldsun/module2.py
+mirror0/heraldsun/herald_spider.py
 mirror0/news/module1.py
 mirror0/news/news_spider.py
 mirror0/news/module0.py
 mirror0/foxsports/foxsports_spider.py
 mirror0/afl/afl_spider.py
 mirror0/wb/wb_spider.py
-mirror0
 mirror0/yahoo/yahoo_spider.py
 mirror0/yahoo/stream_pipeline.py
