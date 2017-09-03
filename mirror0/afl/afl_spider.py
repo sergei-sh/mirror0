@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: 
+"""
 
 import json
 from logging import ERROR, INFO, WARNING, DEBUG
@@ -14,6 +20,9 @@ from mirror0.sscommon.aux import format_exc, log
 CONFIG_SECTION = "Afl"
 
 class AflSpider(mirror0.generic_spider.Spider):
+    """The concrete spider implementation for afl.com.au
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             {'mirror0.afl.afl_extractor_pipeline.AflExtractorPipeline' : 543,
              'mirror0.afl.afl_fs_pipeline.AflFSPipeline' : 544,

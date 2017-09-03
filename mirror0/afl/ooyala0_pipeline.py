@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The extraction of video hosted at ooyala.com 
+"""
 
 from logging import ERROR, DEBUG, WARNING
 import re
@@ -12,6 +18,8 @@ from .ooyala1_pipeline import OOYALA_JS_ID
 NO_VIDEO = False
 
 class Ooyala0Pipeline(MediaPipelineEx):
+    """The initial request in the chain needed for ooyala extraction
+    """
 
     def __init__(self):
         super(self.__class__, self).__init__(dont_filter=True)

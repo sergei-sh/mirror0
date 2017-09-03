@@ -1,3 +1,10 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The application entry point. Chooses an appropriate spider and runs it sequentially for each category.
+"""
+
 
 import argparse
 from distutils import dir_util
@@ -48,6 +55,8 @@ def init_logging():
         sys.exit(1)
 
 class SequentialRunner(object):
+    """Utilizes CrawlerProcess interface to run the spider for each category url.
+       Makes the next category spider run, after the current one is done."""
     
     def __init__(self, spider_cls, urls, proc, **kwargs):
         self._urls = urls

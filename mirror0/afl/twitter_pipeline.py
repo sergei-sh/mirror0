@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The extraction of video hosted at twitter.com  See http://sergeis.com/web-scraping/media-twitter-2/ for details.
+"""
 
 import json
 from logging import ERROR, DEBUG, WARNING, INFO

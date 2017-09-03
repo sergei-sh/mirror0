@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The extraction of video hosted at twitter.com  See http://sergeis.com/web-scraping/media-twitter-2/ for details.
+"""
 
 from logging import ERROR, DEBUG, WARNING, INFO
 import scrapy
@@ -6,8 +12,10 @@ from mirror0.generic_spider import MediaPipelineNoFilter
 from mirror0.sscommon.aux import log, format_exc
 
 class TwitterPipelineBase(MediaPipelineNoFilter):
-    """Get either a list or a single link string"""
+    """ Parallels few twitter videos extraction. See http://sergeis.com/web-scraping/media-twitter-2/ for details.
+    """
     def extract_next_link(self, response_text, item):
+        """Get either a list or a single link string"""
         raise NotImplementedError()
 
     def start_state_if_needed(self, item, data_num):

@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The extraction of video hosted at ooyala.com 
+"""
 
 from logging import ERROR, DEBUG, WARNING
 import os.path
@@ -11,6 +17,8 @@ from mirror0.sscommon.aux import log, format_exc
 OOYALA_JS_ID = "O_TYPE2"
 
 class Ooyala1Pipeline(MediaPipelineEx):
+    """The finalizing request in ooyala extraction chain
+    """
     STATE_ID = "OOY1"
 
     def __init__(self):

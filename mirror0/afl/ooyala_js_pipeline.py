@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The extraction of video hosted at ooyala.com  Using Chromedriver for videos problematic otherwise.
+"""
 
 from logging import ERROR, DEBUG, WARNING, INFO
 import logging
