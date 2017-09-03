@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import json
 import re
@@ -12,6 +18,9 @@ from mirror0 import Config
 CONFIG_SECTION = "WesternBulldogs"
 
 class WbSpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             { 
                 'mirror0.wb.wb_extractor_pipeline.WbExtractorPipeline' : 543,

@@ -36,16 +36,15 @@ from mirror0.wb import WbSpider
 from mirror0.heraldsun import HeraldSpider
 
 def init_logging():
+    """ Initializes project logging and creates LOGS directory if necessary
+    """
     try:
         logdir = Config.value(mirror0.SECTION_COMMON, "log_directory")
-        #cmdline = "sed 's|~LOGDIR~|%s|g' loggers.conf > loggers.tmp" % logdir
-        #os.system(cmdline)
         try:
             dir_util.mkpath(logdir)
         except Exception as err:
             if hasattr(err, 'errno') and 17 == err.errno:
                 pass 
-        #logging.config.fileConfig("loggers.tmp")
         fh = logging.FileHandler(os.path.join(logdir, "console.log"))
         fh.setFormatter(logging.Formatter("(%(module)s.%(funcName)s) [%(levelname)s]: %(message)s"))
         fh.setLevel(logging.DEBUG)

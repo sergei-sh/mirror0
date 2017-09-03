@@ -1,7 +1,16 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from mirror0.generic_spider import RawExtractorPipeline
 
 class YahooExtractorPipeline(RawExtractorPipeline):
+    """XPaths/custom logic for item extraction specific to this website
+    """
+
     def __init__(self):
         RawExtractorPipeline.__init__(self)
 

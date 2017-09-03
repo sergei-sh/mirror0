@@ -1,3 +1,10 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: Video downloading pipeline for Yahoo website.
+This should be rewritten - spawning/waiting processes in the Twisted callback.
+"""
 
 import json
 from logging import ERROR, DEBUG, WARNING
@@ -20,9 +27,13 @@ from mirror0 import SECTION_COMMON
 from mirror0.sscommon.aux import log, format_exc
 from mirror0 import Config
 
+"""Do not actually download videos"""
 NO_VIDEO = False
 
 class StreamPipeline(object):
+    """ Spawns a process with youtube-dl for each item. At some moment spider calls "wait_all_finished" where
+    all processes yield their results
+    """
 
     STATE_ID = "S_VID"
     STATE_NOVID = "NOVID"

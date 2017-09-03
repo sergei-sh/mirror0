@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from scrapy.item import Field
 from mirror0.generic_spider import StateItem

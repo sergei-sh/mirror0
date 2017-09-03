@@ -1,8 +1,17 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from mirror0.news.module1 import NewsExtractorPipeline
 
 
 class HeraldExtractorPipeline(NewsExtractorPipeline):
+    """XPaths/custom logic for item extraction specific to this website
+       Generally reusing news.com.au logic
+    """
 
     def __init__(self):
         NewsExtractorPipeline.__init__(self)

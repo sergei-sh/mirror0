@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The base for all Mirror0 extractors
+"""
 
 from datetime import datetime
 from logging import ERROR, INFO, WARNING, DEBUG
@@ -13,6 +19,8 @@ from mirror0 import Config
 from . import time_utils 
 
 class RawExtractorPipeline(object):
+    """ Extracts all base elements for Mirror0 websites set
+    """
     NAME = "RawExtractorPipeline"
 
     def __init__(self):

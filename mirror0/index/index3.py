@@ -2,7 +2,7 @@
 Project: Mirror0
 Author: Sergei Shliakhtin xxx.serj@gmail.com
 Purpose: Index class implementation 
-Comments: This worth being rewritten in C++
+Comments: Index version rewritten for Python 3. This worth being rewritten in C++
 """
 
 import binascii

@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: Large DOWNLOAD_WARNSIZE because we're downloading large videos
+"""
+
 # Scrapy settings for mirror0 project
 #
 # For simplicity, this file contains only settings considered important or

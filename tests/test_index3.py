@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import logging
 from os.path import join

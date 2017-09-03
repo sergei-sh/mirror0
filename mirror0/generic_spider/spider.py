@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: Contains the base class for different website spiders
+"""
 
 from ConfigParser import NoOptionError
 from exceptions import ValueError
@@ -22,10 +28,16 @@ from mirror0.sscommon.aux import format_exc, log
 from .text_image_pipeline import TextImagePipeline
 from .object_state_indicators import ObjectStateIndicators
 
+"""Collect item links without actually scraping them"""
 INDEX_ONLY = False
+"""How many links to collect before starting to scrape them. 
+If page has more than this value, start at the page end"""
 LINKS_BATCH = 1 
 
 class Spider(scrapy.Spider):
+    """Scrapes one category passed with start_url constructor arg. Lists category pages, scrapes items from each page only after
+    the previous page is complete, utilizing spider_idle() signal
+    """
     _index_file_name = NotImplementedError()
     name = NotImplementedError()
     _item_class = NotImplementedError()

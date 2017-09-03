@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import mirror0.generic_spider 
 from mirror0.yahoo.yahoo_item import YahooItem
@@ -7,6 +13,9 @@ from mirror0 import Config
 CONFIG_SECTION = "Yahoo"
 
 class YahooSpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             {'mirror0.yahoo.yahoo_extractor_pipeline.YahooExtractorPipeline': 544,
             'mirror0.yahoo.yahoo_fs_pipeline.YahooFSPipeline': 545,

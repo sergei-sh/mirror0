@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import json
 import re
@@ -13,6 +19,9 @@ from mirror0 import Config
 CONFIG_SECTION = "NewsComAu"
 
 class NewsSpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             { 
                 'mirror0.news.module1.NewsExtractorPipeline' : 543,
@@ -80,6 +89,7 @@ from mirror0.generic_spider import MediaPipelineEx
 from mirror0.sscommon.aux import log, format_exc
 
 class Niux(MediaPipelineEx):
+    """THIS SHOULD BE RENAMED/MOVED"""
     STATE_ID = "NIU"
     STATE_TYPE2 = "NIU_TYPE2"
     request_code = "89a379a0e1e94feca5bb87c46a8b2d5e"

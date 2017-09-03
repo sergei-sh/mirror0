@@ -1,8 +1,20 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from logging import ERROR
 from mirror0.sscommon.aux import log
 
 class ObjectStateIndicators(object):
+    """Allows to track multiple states of the item.
+       Each state is a string ID which should be "started" then "ended" on an item.
+       At the end reports all states which can be written to log, to see which states (pipelines)
+       are incomplete
+    """
+
     def __init__(self):
         self.__started = []
         self.__finished = []

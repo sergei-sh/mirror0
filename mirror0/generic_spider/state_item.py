@@ -1,8 +1,15 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import scrapy
 from scrapy import Item, Field
  
 class StateItem(scrapy.Item):
+    """Reports its success state to the spider status dict"""
 
     def __init__(self, spider):
         super(StateItem, self).__init__(self)

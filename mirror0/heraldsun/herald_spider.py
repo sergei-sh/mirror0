@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from logging import ERROR, DEBUG, INFO, getLogger
 import json
@@ -62,6 +68,9 @@ def do_login(inst, driver):
         raise
 
 class HeraldSpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             { 
                 'mirror0.heraldsun.module1.HeraldExtractorPipeline' : 543,
@@ -157,6 +166,7 @@ class HeraldSpider(mirror0.generic_spider.Spider):
 from mirror0.news import Niux
 
 class NiuxHerald(Niux):
+    """THIS SHOULD BE RENAMED/MOVED"""
     request_code = "486c0d047bbe4823a12ababd8c14f818"
 
     def __init__(self):

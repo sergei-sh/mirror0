@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: This should be rewritten actually. Blocking code urlopen() in the twisted callback.
+"""
 
 from logging import ERROR, DEBUG
 import os.path
@@ -15,6 +21,7 @@ NO_PICTURES = False
 ARTICLE_FILE = "article.txt"
 
 class TextImagePipeline(object):
+    """Downloads files using previously scraped URL, being stored in the item"""
     STATE_ID = "T&IMG"
     NAME = "text_image_pipeline"
 

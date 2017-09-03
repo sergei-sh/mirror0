@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: Downloads videos from known locations
+"""
 
 from logging import ERROR, DEBUG, WARNING
 
@@ -14,6 +20,8 @@ class RequestEx(scrapy.Request):
         print self._url
 
 class VideoDirectPipeline(MediaPipelineEx):
+    """Sends requests for video download from item URL list
+    """
     STATE_ID = "VID"
 
     def __init__(self, **kw):

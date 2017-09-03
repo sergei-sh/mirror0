@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: The crawler implementation for foxsports.com.au
+"""
 
 import mirror0.generic_spider 
 from mirror0.generic_spider import RawExtractorPipeline
@@ -12,6 +18,9 @@ import re
 CONFIG_SECTION = "Foxsports"
 
 class FoxsportsSpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { 
         "ITEM_PIPELINES" : 
             {'mirror0.foxsports.foxsports_extractor_pipeline.FoxsportsExtractorPipeline': 544,

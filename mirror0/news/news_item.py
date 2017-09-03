@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from scrapy import Item, Field
 
@@ -19,6 +25,7 @@ class NewsItem(StateItem):
     playlist_url = Field()
 
 class Linja(StreamPipeline):
+    """THIS SHOULD BE RENAMED/MOVED"""
     def __init__(self):
         super(Linja, self).__init__()
         self.download_url_field = "playlist_url"

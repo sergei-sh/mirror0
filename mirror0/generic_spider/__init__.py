@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from mirror0.generic_spider.spider import Spider
 from mirror0.generic_spider.raw_extractor_pipeline import RawExtractorPipeline

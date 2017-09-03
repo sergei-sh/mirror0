@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from logging import ERROR, INFO, WARNING, DEBUG
 
@@ -10,6 +16,8 @@ import os.path
 import mirror0
 
 class NewsExtractorPipeline(RawExtractorPipeline):
+    """XPaths/custom logic for item extraction specific to this website
+    """
 
     def __init__(self):
 

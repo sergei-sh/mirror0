@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 from logging import ERROR, INFO, WARNING, DEBUG
 from mirror0.sscommon.aux import log, format_exc
@@ -6,6 +12,10 @@ import re
 from mirror0.generic_spider import RawExtractorPipeline
 
 class WatodayExtractorPipeline(RawExtractorPipeline):
+    """XPaths/custom logic for item extraction specific to this website.
+       Prepares twitter urls.
+    """
+
     def __init__(self):
         RawExtractorPipeline.__init__(self)
 

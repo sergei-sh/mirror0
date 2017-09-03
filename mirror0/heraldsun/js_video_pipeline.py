@@ -1,3 +1,10 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes: Loads the item page with Chromedriver and scrapes all videos (after JS fills in them 
+on the page) by xpath
+"""
 
 import logging 
 from logging import ERROR, DEBUG, WARNING, INFO
@@ -25,6 +32,7 @@ def _clean_if_need():
 TIMEOUT = 360 
 
 class Nwjs(MediaPipelineEx):
+    """THIS SHOULD BE RENAMED/MOVED"""
     STATE_ID = Niux.STATE_TYPE2
     VID_X = "//video[contains(@src, 'http')]"
 
@@ -32,9 +40,6 @@ class Nwjs(MediaPipelineEx):
         kw["dont_filter"] = True
         logging.getLogger("selenium").setLevel(DEBUG)
         super(Nwjs, self).__init__(*args, **kw)
-
-    #def close_spider(self, spider):
-    #    del self.driver
 
     def open_spider(self, spider):
         #super(self.Nwjs, self).open_spider(spider)
@@ -77,14 +82,8 @@ class Nwjs(MediaPipelineEx):
             _driver.implicitly_wait(TIMEOUT)
             _driver.set_page_load_timeout(TIMEOUT)
  
-            #with open("zzz1.html", "w") as f:
-            #    f.write(_driver.page_source.encode("ascii", "ignore"))
-
             _driver.wait.until(EC.presence_of_element_located(
                   (By.XPATH, self.VID_X)))
-
-            #with open("zzz2.html", "w") as f:
-            #    f.write(_driver.page_source.encode("ascii", "ignore"))
 
             log("OoyalaJS: successfully extracted %s" % url, DEBUG)
             el_list = _driver.find_element_by_xpath(self.VID_X)
@@ -92,17 +91,6 @@ class Nwjs(MediaPipelineEx):
             log(item['playlist_url'], DEBUG)
 
             return item
-            """
-            item['heraldsun_urls'] = []
-            for el in el_list:
-                item['heraldsun_urls'].append(el.get_attribute("src"))
-            log(item['heraldsun_urls'], DEBUG)
-
-            
-
-            #delegate video urls downloading to ooyala1
-            return Ooyala1Pipeline.yield_requests(self, item, 'heraldsun_urls')
-            """
         except TimeoutException as we:
             with open("heraldtimeout.html", "w") as f:
                 f.write(_driver.page_source.encode("ascii", "ignore"))

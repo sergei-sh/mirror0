@@ -1,3 +1,9 @@
+""" 
+Updated: 2016
+Author: Sergei Shliakhtin
+Contact: xxx.serj@gmail.com
+Notes:
+"""
 
 import mirror0.generic_spider 
 from mirror0.watoday.watoday_item import WatodayItem
@@ -9,6 +15,9 @@ import re
 CONFIG_SECTION = "Watoday"
 
 class WatodaySpider(mirror0.generic_spider.Spider):
+    """Spider implementation/xpaths customized for exact website
+    """
+
     custom_settings =  { "ITEM_PIPELINES" : 
             {'mirror0.watoday.watoday_extractor_pipeline.WatodayExtractorPipeline': 544,
             'mirror0.watoday.watoday_fs_pipeline.WatodayFSPipeline': 545,
