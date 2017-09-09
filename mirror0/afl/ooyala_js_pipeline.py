@@ -73,7 +73,7 @@ class OoyalaJSPipeline(MediaPipelineEx):
         logging.getLogger("selenium").setLevel(logging.INFO)
 
     def open_spider(self, spider):
-        super(self.OoyalaJSPipeline, self).open_spider(spider)
+        super(OoyalaJSPipeline, self).open_spider(spider)
         self.driver = init_chrome_driver()
 
 

@@ -9,4 +9,9 @@ from index.index import Index
 
 SECTION_COMMON = "Common"
 
+from init_logging import init_logging
+
+class MirrorException(Exception):
+    pass
+
 

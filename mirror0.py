@@ -2,7 +2,10 @@
 Updated: 2017
 Author: Sergei Shliakhtin
 Contact: xxx.serj@gmail.com
-Notes: The application entry point. Chooses an appropriate spider and runs it sequentially for each category.
+Notes: 
+
+The application entry point. Chooses an appropriate spider and runs it sequentially for each category.
+TODO: investigate constructor run
 """
 
 import argparse
@@ -15,7 +18,7 @@ from scrapy.crawler import CrawlerProcess, Crawler
 from scrapy.utils.project import get_project_settings
 from scrapy import signals
 
-from mirror0.init_logging import init_logging
+from mirror0 import init_logging, MirrorException
 from mirror0.sscommon import log
 
 class SequentialRunner(object):
@@ -28,18 +31,18 @@ class SequentialRunner(object):
         self._process = proc
         self._kwargs = kwargs
         self._spider_name = name
+        self._spider_cls = self._process.spider_loader.load(self._spider_name)
 
-        self.crawl_next()
+        self._urls = self._spider_cls.create_start_urls()
+        if not self._urls:
+            raise MirrorException("Spider created empty url list")
 
     def crawl_next(self):        
         """Pop next category from url list and run the next spider with this url"""
 
-        spider_cls = self._process.spider_loader.load(self._spider_name)
-        spider_cls.init_idx_log()
-        self._urls = spider_cls.create_start_urls()
-        new_crawler = Crawler(spider_cls)
-        new_crawler.signals.connect(self.spider_finished, signal=signals.spider_closed)
+        new_crawler = Crawler(self._spider_cls)
         self._process.crawl(new_crawler, start_url=self._urls.pop(0), **self._kwargs)
+        new_crawler.signals.connect(self.spider_finished, signal=signals.spider_closed)
         
     def spider_finished(self, spider, reason):
         """Proceed to the next category url"""
@@ -74,7 +77,7 @@ def run():
     parser.add_argument("spider_name", type=str)
     parser.add_argument("--noindex", help="Scrape all no matter what's already saved", action="store_true")
     parser.add_argument("--lessvid", help="Suppress most Ooyala1 videos (handy for testing other types)", action="store_true")
-    parser.add_argument("--firstpage", help="", action="store_true")
+    parser.add_argument("--firstpage", help="Scrape the first page only from each category", action="store_true")
     keys = parser.parse_args()
 
     settings = get_project_settings()
@@ -82,7 +85,8 @@ def run():
     cleaner = CommandAccumulator()
     
     keys_args = { 'no_index':keys.noindex, 'less_vid':keys.lessvid, 'first_page':keys.firstpage, 'object_cleaner':cleaner }
-    SequentialRunner(process, keys.spider_name, **keys_args)
+    runner = SequentialRunner(process, keys.spider_name, **keys_args)
+    runner.crawl_next()
     log("CrawlerProcess start", DEBUG)
     process.start()
 
