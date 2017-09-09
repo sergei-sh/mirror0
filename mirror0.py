@@ -15,7 +15,6 @@ from scrapy.crawler import CrawlerProcess, Crawler
 from scrapy.utils.project import get_project_settings
 from scrapy import signals
 
-#import mirror0
 from mirror0.init_logging import init_logging
 from mirror0.sscommon import log
 
