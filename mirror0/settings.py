@@ -16,11 +16,13 @@ Notes: Large DOWNLOAD_WARNSIZE because we're downloading large videos
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+SPIDER_LOADER_CLASS = "scrapy.spiderloader.SpiderLoader"
+
 LOG_LEVEL="DEBUG"
 
 BOT_NAME = 'mirror0'
 
-SPIDER_MODULES = ['mirror0.yahoo',]
+SPIDER_MODULES = ["mirror0.afl", "mirror0.foxsports", "mirror0.heraldsun", "mirror0.news", "mirror0.watoday", "mirror0.wb", "mirror0.yahoo"]
 NEWSPIDER_MODULE = 'mirror0.yahoo'
 
 DOWNLOAD_DELAY=0.8

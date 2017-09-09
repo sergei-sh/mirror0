@@ -2,7 +2,7 @@
 Updated: 2016
 Author: Sergei Shliakhtin
 Contact: xxx.serj@gmail.com
-Notes:
+Notes: REFACTOR. No need for singletone here.
 """
 
 
@@ -16,6 +16,8 @@ CONFIG_FILE = os.path.expandvars("$HOME/.mirror0/mirror0.ini")
 #singleton config object
 class Config:
     class ConfigLoader(ConfigParser.ConfigParser, object):
+        _debug_mode = False
+
         def __init__(self):
             super(self.__class__, self).__init__()
             if 0 == len(self.read(CONFIG_FILE)):
@@ -23,7 +25,6 @@ class Config:
 
     _config = ConfigLoader()
     _time = time.strftime("%H:%M %d %b")
-    _debug_mode = False
 
     @staticmethod
     def value(section, key):

@@ -3,6 +3,8 @@ Updated: 2016
 Author: Sergei Shliakhtin
 Contact: xxx.serj@gmail.com
 Notes: Contains the base class for different website spiders
+
+Refactor to use interfaces instead of NotImplementedError
 """
 
 from ConfigParser import NoOptionError
@@ -34,7 +36,19 @@ INDEX_ONLY = False
 If page has more than this value, start at the page end"""
 LINKS_BATCH = 1 
 
+class IdxLogInitializer(type):
+    def __new__(meta, name, bases, cls_dict):
+        spider_cls = type.__new__(meta, name, bases, cls_dict)
+        try:
+            spider_cls.init_idx_log()
+        #call only for descendants, skip Spider itself
+        except AttributeError:
+            pass
+        return spider_cls
+
 class Spider(scrapy.Spider):
+    __metaclass__ = IdxLogInitializer
+
     """Scrapes one category passed with start_url constructor arg. Lists category pages, scrapes items from each page only after
     the previous page is complete, utilizing spider_idle() signal
     """
